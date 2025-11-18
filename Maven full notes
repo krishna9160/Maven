@@ -1,1 +1,98 @@
 
+✅ What is Maven?
+Apache Maven is a build automation and project management tool primarily used for Java projects. It simplifies the process of:
+
+Building (compiling source code)
+Packaging (creating JAR/WAR files)
+Dependency Management (downloading required libraries automatically)
+Project Lifecycle Management (clean, compile, test, package, install, deploy)
+
+Key Features
+
+Convention over Configuration: Standard directory structure and lifecycle phases.
+Dependency Management: Automatically downloads libraries from repositories.
+Plugins: Extend functionality (e.g., compiler plugin, surefire plugin for testing).
+Repositories:
+
+Local Repository: Stored on your machine.
+Central Repository: Maven’s default online repository.
+Remote Repository: Custom repositories for organizations.
+
+
+
+
+✅ What is pom.xml?
+pom.xml (Project Object Model) is the core configuration file for a Maven project. It defines:
+
+Project Information: Name, version, description.
+Dependencies: External libraries your project needs.
+Plugins: Tools for building, testing, packaging.
+Build Settings: Custom configurations.
+Repositories: Where to fetch dependencies from.
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>my-app</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+                   </dependency>
+    </dependencies>
+</project>
+
+Important Tags
+
+<groupId>: Unique ID for your organization/project.
+<artifactId>: Name of the project/module.
+<version>: Version of the project.
+<packaging>: Type of output (jar, war, pom).
+<dependencies>: List of required libraries.
+<build>: Build-related configurations.
+<repositories>: Additional repositories.
+
+
+✅ What are Artifacts?
+An artifact in Maven is any file produced or used during the build process. Common artifacts:
+
+JAR: Java Archive (compiled code).
+WAR: Web Application Archive.
+POM: Project Object Model file.
+Source JAR: Contains source code.
+Test JAR: Contains test classes.
+
+Artifact Coordinates
+Artifacts are uniquely identified by:
+
+groupId
+artifactId
+version
+packaging
+
+Example:
+com.example:my-app:1.0.0:jar
+
+
+✅ Maven Lifecycle
+
+Clean: Removes previous build files.
+Validate: Checks project structure.
+Compile: Compiles source code.
+Test: Runs unit tests.
+Package: Creates JAR/WAR.
+Install: Installs artifact in local repo.
+Deploy: Pushes artifact to remote repo.
+
+
+✅ Why Maven is Important for You (DevOps Context)
+Since you’re learning DevOps, Maven is crucial because:
+
+It integrates with CI/CD tools like Jenkins.
+Automates build and dependency management.
+Works well with artifact repositories like Nexus or Artifactory.
